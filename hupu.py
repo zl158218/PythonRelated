@@ -1,4 +1,17 @@
 #  虎扑步行街   lol 板块爬取
+'''目标：
+        帖子名称
+        帖子链接
+        作者
+        作者链接
+        创建时间
+        回复数
+        浏览数
+        最后回复用户
+        最后回复时间
+        网页地址
+'''
+
 
 import requests
 from bs4 import BeautifulSoup
