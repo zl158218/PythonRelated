@@ -63,25 +63,13 @@ def get_data(post_list,link):
         }
         
         return dicts
-        
-        
-        
-        
-        
+      
         
 def main():
     link = "https://bbs.hupu.com/lol"
     post_list = get_page(link)
-    db = get_data(post_list,link)
-    for d in db:
-        print(db)
-        
-        
-        print(" ")
-        print(" ")
-    
-    
-    
+    get_data(post_list,link)
+  
     
 if __name__ == '__main__':
     main()
