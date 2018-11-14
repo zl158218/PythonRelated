@@ -37,12 +37,51 @@ def get_data(post_list,link):
         titles_urls = title.attrs['href'] # 获取文章url
         titles_url = "https://bbs.hupu.com/" + titles_urls  # 拼接文章 url
         #print(titles_url)
+        authors = html.select('.aulink')[0] #获取作者，及作者链接
+        author = authors.text   # 获取作者
+        #print(author)
+        author_url = authors.attrs['href']  # 获取作者链接
+        #print(author_url)
+        stick_time = html.select('a[style="color:#808080;cursor: initial; "]')[0] # 获取帖子发布时间
+        #print(stick_time.text)
+        reply = html.select('span[class="ansour box"]')[0]  # 获取帖子的回复及浏览数
+        #print(reply.text)
+        end_time = html.select('div[class="endreply box"] > a')[0]  # 最后回复时间
+        #print(end_time.text)  
+        end_author = html.select('div[class="endreply box"] > span')[0]  # 最后回复作者
+        #print(end_author.text) 
         
-            
-            
+        dicts = {
+            'title': titles,
+            'titles_url': titles_url,
+            'author': author,
+            'author_url': author_url,
+            'stick_time': stick_time.text,
+            'reply': reply.text,
+            'end_time': end_time.text,
+            'nd_author':end_author.text,
+        }
+        
+        return dicts
+        
+        
+        
+        
+        
+        
 def main():
     link = "https://bbs.hupu.com/lol"
     post_list = get_page(link)
-    get_data(post_list,link)
+    db = get_data(post_list,link)
+    for d in db:
+        print(db)
+        
+        
+        print(" ")
+        print(" ")
+    
+    
+    
+    
 if __name__ == '__main__':
     main()
