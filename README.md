@@ -1,12 +1,29 @@
 # python
   ## 虎扑步行街爬取
+  - 目标
+    - 帖子名称
+    - 帖子链接
+    - 作者
+    - 作者链接
+    - 创建时间
+    - 回复数
+    - 浏览数
+    - 最后回复时间
+    - 最后回复用户
+  - 待修改
+    1. 动态 Cookies
+    2. 存入mysql
+    3. 存入mongodb
+    4. 存入redis  
   
- # 网易云课堂 cookie 讲解
+  
+  
+ ##### 网易云课堂 cookie 讲解
  - https://study.163.com/course/courseLearn.htm?courseId=1004987028#/learn/video?lessonId=1052108833&courseId=1004987028
  
   python study notes
 
-这里静态Cookies
+ ##### 这里静态Cookies
 
 
 import requests
