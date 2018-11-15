@@ -1,0 +1,46 @@
+# -*- coding: UTF-8 -*-
+import requests
+import selenium
+from selenium import webdriver
+import time
+import pickle
+
+wd = webdriver.Chrome()
+wd.get("https://www.zhihu.com")
+
+time.sleep(45)
+# 设置时间延迟给手动填写帐号密码及验证码
+
+cookies = wd.get_cookies()
+
+pickle.dump(cookies, open("cookies.pkl", "wb"))     # pickle save cookies
+cookies = pickle.load(open("cookies.pkl", "rb"))    # pickle load cookies
+
+s = requests.Session()
+for cookie in cookies:
+    s.cookies.set(cookie['name'], cookie['value'])
+
+s.headers.clear()
+# 删除原始session中标记有python机器人的信息（被网站捕捉到可能造成登录爬取失败）
+
+test = s.get("https://www.zhihu.com")
+print test.text
+
+作者：17不二
+链接：https://www.jianshu.com/p/5e090c51eecc
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+
+（1）方法一使用requests模块：
+使用requests.session()
+
+import requests  
+s = requests.session()  # 可以在多次访问中保留cookie
+s.post(login_url, {'username':username, 'password': password,}, headers=headers)  # POST帐号和密码，设置headers
+r = s.get(url)  # 已经是登录状态了
+
+作者：X_xxieRiemann
+链接：https://www.jianshu.com/p/21fdb8256543
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
