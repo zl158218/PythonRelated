@@ -34,6 +34,7 @@ import re
 
 
 def get_page(link):
+    '''静态cookie'''
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36',
         'Cookie': '_cnzz_CV30020080=buzi_cookie%7Cec37a3af.2c7b.efb6.8885.07033824b4d7%7C-1; _dacevid3=ec37a3af.2c7b.efb6.8885.07033824b4d7; __gads=ID=0a83550d3fac9e34:T=1541944038:S=ALNI_Ma9uJvL88LfvYAquEdy03bg_BAFUA; _HUPUSSOID=2076175d-d05f-4c4e-925c-c0b842c1f488; _cnzz_CV30020080=buzi_cookie%7Cec37a3af.2c7b.efb6.8885.07033824b4d7%7C-1; PHPSESSID=1as5ef0c6fcqgfenmv2q1gp4q0; _CLT=918ebe7bb324d8673460f7af1d701a5c; u=41278725|TWlu6LWw6aOO|c408|f43026cbf7c1fe81c2609446a5bceb6f|f7c1fe81c2609446|aHVwdV82OGE2ZDkyYzA0N2YzNGFi; us=7a1d1fc9f23860ba2a4e221634c3c1c0e49f55f5d0d2cebd239cd2938bc5051a48bcb1b04b7f1f01339ae2a92fcf868d06fdd121c20f685de7567e544793017f; ua=59318616; Hm_lvt_39fc58a7ab8a311f2f6ca4dc1222a96e=1541946457,1542196594,1542284061; Hm_lpvt_39fc58a7ab8a311f2f6ca4dc1222a96e=1542288500; _fmdata=NNYtSOYHBMOr0wruyOjfhZ9%2B00dqiFEAQ8pKfpTyBGbX6xYDD4VQNEGRTBSvGa70G97xjW1%2Bz%2BjBvQfk3Dr8EBZ9CHkqTd9sYqgM9HX4Uv0%3D; __dacevst=5b23c262.7cff1a08|1542290409096'
@@ -95,14 +96,8 @@ def get_data(post_list, link):
         }
         print(dicts)
 
-
-
 https://bbs.hupu.com/lol
-
 https://bbs.hupu.com/lol-3
-
-
-
 '''
 
 
