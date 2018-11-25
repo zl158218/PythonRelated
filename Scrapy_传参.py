@@ -1,8 +1,11 @@
 # 方法1
+
 #coding:utf-8
 #导入模块
 import scrapy
 import re
+
+#导入自己创建的 items
 from Huiche.items import HuicheItem
 
 class DeskSpider(scrapy.Spider):
