@@ -5,6 +5,7 @@ conn = pymysql.connect(
     passwd = '123qwe',
     db = 'centos'
 )
+
 # host后为ip，本地连接为localhost或127.0.0.1
 # port 端口号，默认为3306
 # user 数据库登录用户
