@@ -26,10 +26,6 @@ s.headers.clear()
 test = s.get("https://www.zhihu.com")
 print test.text
 
-作者：17不二
-链接：https://www.jianshu.com/p/5e090c51eecc
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 
 （1）方法一使用requests模块：
@@ -40,7 +36,3 @@ s = requests.session()  # 可以在多次访问中保留cookie
 s.post(login_url, {'username':username, 'password': password,}, headers=headers)  # POST帐号和密码，设置headers
 r = s.get(url)  # 已经是登录状态了
 
-作者：X_xxieRiemann
-链接：https://www.jianshu.com/p/21fdb8256543
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
