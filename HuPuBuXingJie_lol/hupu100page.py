@@ -75,20 +75,37 @@ def save_to_mysql():
     pass
 
 
-def main():
-    for nums in range(0,101):
-        link = "https://bbs.hupu.com/lol-" + str(nums)   #拼接url地址
-        post_list = get_page(link)
-        lists = get_data(post_list,link)
-        for l in lists:
-            print(l)
-            #print(nums)
+
+
+def main(page):
+    # for nums in range(0, 101):
+    link = "https://bbs.hupu.com/lol-" + str(page)  # 拼接url地址
+    post_list = get_page(link)
+    lists = get_data(post_list, link)
+    for l in lists:
+        print(l)
+        # print(page)
+        # print(link)
+
 
 if __name__ == '__main__':
-    main()
+    pool = Pool()
+    pool.map(main,[i for i in range(1,101)])
 
 
 
+# main()   下面的函数是单进程
+# def main():
+#     for nums in range(0,101):
+#         link = "https://bbs.hupu.com/lol-" + str(nums)   #拼接url地址
+#         post_list = get_page(link)
+#         lists = get_data(post_list,link)
+#         for l in lists:
+#             print(l)
+#             #print(nums)
+
+# if __name__ == '__main__':
+#     main()
 
 
 
