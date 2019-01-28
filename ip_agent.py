@@ -39,7 +39,6 @@ def get_ip():
 if __name__ == "__main__":
     ip = get_ip()
     # print(ip)
-
 	
 # proxies = {'http': 'http://localhost:8888'}    # proxies
 # r = requests.get("http://ip.chinaz.com/", proxies=proxies, timeout=3)   设置proxies
