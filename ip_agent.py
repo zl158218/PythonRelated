@@ -22,7 +22,7 @@ def get_ip():
         for ip in ips:
             if str(ip[2]) == "HTTPS":
                 try:
-                    proxies = {'https': 'http://' + ip[0] + ":" + ip[1]}
+                    proxies = {'https': 'https://' + ip[0] + ":" + ip[1]}
                     # print(proxies)
                     # url = 'https://www.douban.com/'
                     url = 'https://www.baidu.com/'
