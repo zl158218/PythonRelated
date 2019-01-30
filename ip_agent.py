@@ -1,13 +1,7 @@
 # coding:utf-8
-'''
-ip 代理
-本次用的 https 类型， http 代理自行调整。
-HTTPS只是在http与tcp之间加了一个ssl层
-'''
 import requests
 import re
 import random
-
 
 def get_ip():
     headers = {
@@ -23,9 +17,7 @@ def get_ip():
             if str(ip[2]) == "HTTPS":
                 try:
                     proxies = {'https': 'https://' + ip[0] + ":" + ip[1]}
-                    # print(proxies)
-                    # url = 'https://www.douban.com/'
-                    url = 'https://www.baidu.com/'
+                    url = 'https://www.163.com/'
                     douban = requests.get(url, headers=headers, proxies=proxies, timeout=1)
                     if douban.status_code == 200:
                         # print(proxies)
@@ -35,10 +27,6 @@ def get_ip():
                 else:
                     print('success')
 
-
 if __name__ == "__main__":
     ip = get_ip()
-    # print(ip)
-	
-# proxies = {'http': 'http://localhost:8888'}    # proxies
-# r = requests.get("http://ip.chinaz.com/", proxies=proxies, timeout=3)   设置proxies
+    print(ip)
