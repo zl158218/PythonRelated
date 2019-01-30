@@ -24,8 +24,6 @@ def get_ip():
                         return proxies
                 except:
                     continue
-                else:
-                    print('success')
 
 if __name__ == "__main__":
     ip = get_ip()
