@@ -2,6 +2,7 @@
 import requests
 import re
 import random
+import time
 
 def get_ip():
     headers = {
@@ -9,7 +10,8 @@ def get_ip():
     }
     for i in range(1, 10):
         url = 'https://www.xicidaili.com/nn/' + str(i)  # 国内高匿代理IP
-        html = requests.get(url, headers=headers).text
+        # proxies = {'https': 'https://116.209.56.176:9999'}   # ip失效了,自行更换
+        html = requests.get(url, headers=headers,proxies=proxies).text
         pattern = re.compile('<td>([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*)</td>.*?<td>(\d*?)</td>.*?<td>([A-Z]*)</td>', re.S)
         ips = pattern.findall(html)
         for ip in ips:
@@ -19,11 +21,11 @@ def get_ip():
                     url = 'https://www.163.com/'
                     douban = requests.get(url, headers=headers, proxies=proxies, timeout=1)
                     if douban.status_code == 200:
-                        # print(proxies)
                         return proxies
                 except:
                     continue
 
 if __name__ == "__main__":
-    ip = get_ip()
-    print(ip)
+    get_ip()
+    #xx = get_ip()
+    #print(xx)
