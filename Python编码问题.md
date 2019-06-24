@@ -11,6 +11,7 @@ print(res.text)
 ```
 ### 方案二
 ```
+# 如果网站返回的页面较大，会影响爬虫速度
 # coding:utf-8
 import chardet
 import requests
