@@ -26,7 +26,6 @@ class Worker(threading.Thread):
             self.queue.task_done()
 
 
-
 # 队列
 queue = queue.Queue()
 # 加入100个任务队列
