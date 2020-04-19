@@ -24,3 +24,5 @@ res.encoding =chardet.detect(res.content)['encoding']
 print(res.text)
 print(res.encoding)
 ```
+
+> html_text = response.text.encode(response.encoding).decode('utf-8')
