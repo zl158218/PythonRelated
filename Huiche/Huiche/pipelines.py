@@ -9,7 +9,7 @@ from scrapy import Request
 import re
 from scrapy.exceptions import DropItem
 import scrapy
-from scrapy.contrib.pipeline.images import ImagesPipeline
+from scrapy.pipelines.images import ImagesPipeline
 
 
 class HuichePipeline(ImagesPipeline):
