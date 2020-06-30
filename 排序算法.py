@@ -1,4 +1,5 @@
 import random
+import time
 def ChaRu():
     list1 = [x for x in range(0,100,4)]
     random.shuffle(list1)
@@ -21,6 +22,31 @@ def ChaRu():
 
     print("排序后的 list：",list1)
 
-if __name__ == "__main__":
-    # MaoPao()
+def selection_sort(arr):
+    for i in range(len(arr) - 1):
+        # 记录最小数的索引
+        minIndex = i
+        for j in range(i + 1, len(arr)):
+            m = time.strptime(list(arr[j].values())[0], "%Y-%m-%dT%H:%M:%S.000Z")
+            a = int(time.mktime(m))
+            n = time.strptime(list(arr[minIndex].values())[0], "%Y-%m-%dT%H:%M:%S.000Z")
+            n = int(time.mktime(n))
+            if a < n:
+                minIndex = j
+        # i 不是最小数时，将 i 和最小数进行交换
+        if i != minIndex:
+            arr[i], arr[minIndex] = arr[minIndex], arr[i]
+    return arr
+
+if __name__ == '__main__':
+    lists = [
+        {'小王': '2020-06-29T04:24:16.000Z'},
+        {'小二': '2020-01-21T09:36:47.000Z'}, 
+        {'小张': '2020-06-23T08:09:11.000Z'},
+        {'小宝': '2020-04-27T09:36:47.000Z'}, 
+        {'小亖': '2020-05-27T09:36:47.000Z'}, 
+        {'小刚': '2020-05-17T09:36:47.000Z'},
+    ]
+    result = selectionSort(lists)
+    print(result)
     ChaRu()
