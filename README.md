@@ -52,11 +52,12 @@ if __name__ == "__main__":
 ```
 
 ### 魔法方法
-
+```
 __init__
     初始化方法，创建对象后，默认立刻被调用，可接收参数。
 __new__
     1, 至少要有一个参数 cls
     2, 必须要有返回值
+```
 [详解1](https://zhuanlan.zhihu.com/p/58139772)
 [详解2](https://mp.weixin.qq.com/s/SyC_LLQL8AU3i6wYNlOdNQ)
