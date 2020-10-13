@@ -102,3 +102,6 @@ __new__
     ```
   - #### 其他
     > res = res.text.encode(response.encoding).decode('utf-8')
+
+
+- [后端](https://www.zhihu.com/question/39888195/answer/1513689754)
