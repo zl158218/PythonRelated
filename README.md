@@ -1,3 +1,9 @@
+### 个人总结
+   - 从在浏览器中输入网址(URL)，到屏幕上显示出网页的内容, 都发生了什么? 
+   - 推荐书籍  《网络是怎样连接的》  能背多少背多少, 能理解多少理解多少
+    
+
+
 ### 模板相关
   - [单个爬虫或接口请求](https://github.com/zl158218/PythonRelated/blob/master/Template/spider_template.py)
 
