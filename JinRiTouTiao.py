@@ -88,5 +88,22 @@ def main():
         imgs = img_url(json)
         parse_img(imgs)
 
+import sys
+
+def error_line():
+    s = sys.exc_info()
+    return "errLine {} ".format( s[2].tb_lineno)
+
+print(sys._getframe().f_lineno)
+try:
+    print(str(2.9))
+    t = 1
+    t2 = "1"
+    t3 = t + t2
+    
+except Exception as e:
+    print(error_line())
+    print(sys._getframe().f_lineno)
+
 if __name__ == '__main__':
     main()

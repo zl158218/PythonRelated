@@ -21,6 +21,7 @@ def validation(headers,ip):
             proxies = {'https': 'https://' + i[0]+ ":" + i[1]}
             try:
                 proxies = {'https': 'https://' + i[0]+ ":" + i[1]}
+                print(proxies)
                 url = 'https://www.163.com/'
                 html = requests.get(url, headers=headers, proxies=proxies, timeout=1)
                 if html.status_code == 200:
