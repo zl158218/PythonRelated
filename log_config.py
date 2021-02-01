@@ -6,11 +6,10 @@ import logging
 import logging.handlers
 from logging.handlers import TimedRotatingFileHandler
 
-
-'''
-@描述: 日志模块
-@日期: 2021-01-27
-'''
+"""
+日志配置
+@date: 2021-01-30
+"""
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
