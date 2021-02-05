@@ -1,4 +1,6 @@
 ### 个人总结
+[基础](https://pic4.zhimg.com/v2-3babf5c369ec1c0227b2ca3d3607ecfd_r.jpg?source=1940ef5c)
+
    - 从在浏览器中输入网址(URL)，到屏幕显示出网页的内容, 都发生了什么? 
    - ```
      简述:  
