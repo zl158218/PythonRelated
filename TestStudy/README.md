@@ -1,11 +1,9 @@
 # 路线-测试岗
 
 ### 一些资料
-- Python 相关:
-    https://mp.weixin.qq.com/s/IySEKZoqIj1K2rM5_Hx8pw
+- Python 相关: https://mp.weixin.qq.com/s/IySEKZoqIj1K2rM5_Hx8pw
         
-- Java 路线: 
-    https://github.com/hansonwang99/JavaCollection
+- Java 路线: https://github.com/hansonwang99/JavaCollection
 
 ### 测试路线每日一读
 
