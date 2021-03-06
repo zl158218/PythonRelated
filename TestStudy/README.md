@@ -5,7 +5,7 @@
         
 - Java 路线: https://github.com/hansonwang99/JavaCollection
 
-### 测试路线每日一读
+### [测试路线每日一读](https://zhuanlan.zhihu.com/p/142631240)
 
 - 进度
     - 版本控制工具 git | svn
