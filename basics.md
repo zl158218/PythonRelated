@@ -1,4 +1,4 @@
-#### Python 内存管理机制
+## Python 内存管理机制
 - 引用计数
 - 垃圾回收
     - 引用计数
@@ -29,3 +29,42 @@
 )
 
 [官网文档](https://docs.python.org/zh-cn/3.7/c-api/memory.html)
+
+
+## 单例模式
+```python
+# -*- coding: UTF-8 -*-
+
+# 视频地址： https://www.bilibili.com/video/BV1nt411s7qH?from=search&seid=15865521890966644423
+
+from typing import Any
+
+
+class SingletonPatten:
+    
+    __obj = None
+    __init_flag = True
+    
+    
+    def __new__(cls, *args, **kwargs) -> Any:
+        if cls.__obj is None:
+            cls.__obj = object.__new__(cls)
+        
+        return cls.__obj
+    
+    def __init__(self, name):
+        if SingletonPatten.__init_flag:
+            print('init...')
+            self.name = name
+        SingletonPatten.__init_flag = False
+        
+
+a = SingletonPatten("aa")
+b = SingletonPatten("bb")
+
+print(a)
+print(b)
+
+c = SingletonPatten("cc")
+print(c)
+```
