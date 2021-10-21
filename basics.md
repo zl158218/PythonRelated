@@ -1,3 +1,5 @@
+# 基础系列
+
 ## Python 内存管理机制
 - 引用计数
 - 垃圾回收
@@ -17,26 +19,24 @@
 - 内存池
 
 
-[详情1](https://www.zhihu.com/question/30747394/answer/1001368660)
+    [详情1](https://www.zhihu.com/question/30747394/answer/1001368660)
 
-[详情2](https://juejin.cn/post/6844903811375431694)
+    [详情2](https://juejin.cn/post/6844903811375431694)
 
-[详情3](https://juejin.cn/post/6844903954325700621)
+    [详情3](https://juejin.cn/post/6844903954325700621)
 
-[详情4](https://segmentfault.com/a/1190000016078708)
+    [详情4](https://segmentfault.com/a/1190000016078708)
 
-[详情csdn](https://www.cnblogs.com/shengulong/p/10143856.html
-)
+    [详情csdn](https://www.cnblogs.com/shengulong/p/10143856.html
+    )
 
-[官网文档](https://docs.python.org/zh-cn/3.7/c-api/memory.html)
+    [官网文档](https://docs.python.org/zh-cn/3.7/c-api/memory.html)
 
 
 ## 单例模式
+> [视频地址](https://www.bilibili.com/video/BV1nt411s7qH?from=search&seid=15865521890966644423)
 ```python
 # -*- coding: UTF-8 -*-
-
-# 视频地址： https://www.bilibili.com/video/BV1nt411s7qH?from=search&seid=15865521890966644423
-
 from typing import Any
 
 
@@ -68,3 +68,24 @@ print(b)
 c = SingletonPatten("cc")
 print(c)
 ```
+
+## 闭包
+> 内部函数对外部函数作用域的引用
+
+```python
+def func_one():
+    name = 'Tom'
+    def func_two(friend):
+        print(f"{name} & {friend}")
+    return func_two
+
+func_one()("Jerry")
+# Tom & Jerry
+
+#---其他---
+globals() # 以dict的方式存储所有全局变量
+locals()  # 以dict的方式存储所有局部变量
+```
+
+
+- [参考](https://mp.weixin.qq.com/s/IySEKZoqIj1K2rM5_Hx8pw)
